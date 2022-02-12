@@ -6,5 +6,5 @@ public abstract class UnitFeatures : ScriptableObject
 {
     [SerializeField] protected int _baseHealth;
 
-    public int BaseHealth => _baseHealth;
+    public virtual int Health => _baseHealth;
 }

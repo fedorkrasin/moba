@@ -10,6 +10,6 @@ public abstract class Unit : MonoBehaviour
 
     private void Start()
     {
-        _health = new HealthSystem(_features.BaseHealth);
+        _health = new HealthSystem(_features.Health);
     }
 }
