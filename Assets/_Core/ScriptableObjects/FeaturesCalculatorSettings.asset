@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e6d335ad1b24c4c9128682ecc8e955, type: 3}
   m_Name: FeaturesCalculatorSettings
   m_EditorClassIdentifier: 
-  _hpForStrength: 10
+  _hpForStrength: 20

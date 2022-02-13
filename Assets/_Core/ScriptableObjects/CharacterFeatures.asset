@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: CharacterFeatures
   m_EditorClassIdentifier: 
   _baseHealth: 100
-  _strength: 10
+  _currentLevel: 10
+  _maxLevel: 25
+  _baseStrength: 10
+  _strengthGain: 1.5

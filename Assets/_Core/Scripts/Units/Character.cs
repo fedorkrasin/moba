@@ -8,6 +8,8 @@ public class Character : Unit
 {
     private void OnMouseDown()
     {
-        Debug.Log(_health.GetHealth());
+        Debug.Log("HP: " + _health.GetHealth());
+        Debug.Log("MP: " + _mana.GetMana());
+        Debug.Log("Level: " + _level.GetCurrentLevel());
     }
 }
