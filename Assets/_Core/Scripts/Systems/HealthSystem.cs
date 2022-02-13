@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthSystem
+public class HealthSystem : IRegenerable
 {
     private int _maxHealth;
     private int _currentHealth;
@@ -27,5 +27,10 @@ public class HealthSystem
         _currentHealth += healAmount;
 
         if (_currentHealth > _maxHealth) _currentHealth = _maxHealth;
+    }
+
+    public void Regenerate(float regenerationPerSecond)
+    {
+        throw new System.NotImplementedException();
     }
 }

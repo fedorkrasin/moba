@@ -23,10 +23,15 @@ public class CharacterFeatures : UnitFeatures
     public override int Mana => FeaturesCalculator.CalculateMana(base.Mana, (int) Intelligence);
     
     public override int Damage => FeaturesCalculator.CalculateDamage(base.Damage, baseAttributeStats);
+    public override int MediumDamage => FeaturesCalculator.CalculateDamage(base.MediumDamage, baseAttributeStats);
     
     public float Strength => FeaturesCalculator.CalculateStrength(_baseStrength, _strengthGain, CurrentLevel);
     public float Agility => FeaturesCalculator.CalculateAgility(_baseAgility, _agilityGain, CurrentLevel);
     public float Intelligence => FeaturesCalculator.CalculateIntelligence(_baseIntelligence, _intelligenceGain, CurrentLevel);
+
+    public float StrengthGain => _strengthGain;
+    public float AgilityGain => _agilityGain;
+    public float IntelligenceGain => _intelligenceGain;
     
     private int baseAttributeStats => _attribute switch
     {

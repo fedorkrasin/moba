@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: FeaturesCalculatorSettings
   m_EditorClassIdentifier: 
   _hpForStrength: 20
+  _mpForIntelligence: 20

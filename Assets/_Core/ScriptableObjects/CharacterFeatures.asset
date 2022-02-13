@@ -13,7 +13,15 @@ MonoBehaviour:
   m_Name: CharacterFeatures
   m_EditorClassIdentifier: 
   _baseHealth: 100
+  _baseMana: 50
+  _minDamage: 30
+  _maxDamage: 40
   _currentLevel: 10
   _maxLevel: 25
+  _attribute: 0
   _baseStrength: 10
+  _baseAgility: 8
+  _baseIntelligence: 15
   _strengthGain: 1.5
+  _agilityGain: 0.8
+  _intelligenceGain: 2

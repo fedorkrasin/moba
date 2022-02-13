@@ -17,6 +17,8 @@ public abstract class UnitFeatures : ScriptableObject
     public virtual int Mana => _baseMana;
 
     public virtual int Damage => Random.Range(_minDamage, _maxDamage + 1);
+    public virtual int MediumDamage => (_minDamage + _maxDamage) / 2;
 
     public int CurrentLevel => _currentLevel;
+    public int MaxLevel => _currentLevel;
 }
