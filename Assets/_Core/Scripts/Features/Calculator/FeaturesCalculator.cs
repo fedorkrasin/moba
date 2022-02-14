@@ -16,6 +16,16 @@ public class FeaturesCalculator : Singleton<FeaturesCalculator>
         return baseMana + intelligence * Instance._settings.MpForIntelligence;
     }
 
+    public static float CalculateHealthRegeneration(float baseHealthRegeneration, int strength)
+    {
+        return baseHealthRegeneration + strength * Instance._settings.HpRegenForStrength;
+    }
+    
+    public static float CalculateManaRegeneration(float baseManaRegeneration, int intelligence)
+    {
+        return baseManaRegeneration + intelligence * Instance._settings.MpRegenForIntelligence;
+    }
+
     public static int CalculateDamage(int baseDamage, int stats)
     {
         return baseDamage + stats;

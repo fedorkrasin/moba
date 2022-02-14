@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hpForStrength: 20
   _mpForIntelligence: 20
+  _hpRegenForStrength: 0.1
+  _mpRegenForIntelligence: 0.05

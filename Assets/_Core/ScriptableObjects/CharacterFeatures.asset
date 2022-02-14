@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _baseHealth: 100
   _baseMana: 50
+  _baseHealthRegeneration: 0.5
+  _baseManaRegeneration: 0.4
   _minDamage: 30
   _maxDamage: 40
   _currentLevel: 10
   _maxLevel: 25
-  _attribute: 0
+  _attribute: 2
   _baseStrength: 10
   _baseAgility: 8
   _baseIntelligence: 15

@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class PlayerStatsConsole : MonoBehaviour
 {
     private const string lvl = "Level: {0}\tMax level: {1}";
-    private const string hp = "HP: {0}/{1} ({2}%) + {3} per sec";
-    private const string mp = "MP: {0}/{1} ({2}%) + {3} per sec";
+    private const string hp = "HP: {0} / {1} ({2}%) + {3} per sec";
+    private const string mp = "MP: {0} / {1} ({2}%) + {3} per sec";
     private const string dmg = "Damage: {0}";
     
     private const string strength = "Strength: {0} + {1}";
@@ -27,8 +27,8 @@ public class PlayerStatsConsole : MonoBehaviour
         var f = _character.Features as CharacterFeatures;
 
         _consoleText.text = string.Format(lvl, f.CurrentLevel, f.MaxLevel) + "\n" +
-                            string.Format(hp, f.Health, f.Health, 0, 0) + "\n" +
-                            string.Format(mp, f.Mana, f.Mana, 0, 0) + "\n" +
+                            string.Format(hp, _character.Health.GetHealth(), f.Health, _character.Health.GetHealth() / f.Health * 100, f.HealthRegeneration) + "\n" +
+                            string.Format(mp, _character.Mana.GetMana(), f.Mana, _character.Mana.GetMana() / f.Mana * 100, f.ManaRegeneration) + "\n" +
                             string.Format(dmg, f.MediumDamage) + "\n" +
                             string.Format(strength, f.Strength, f.StrengthGain) + "\n" +
                             string.Format(agility, f.Agility, f.AgilityGain) + "\n" +

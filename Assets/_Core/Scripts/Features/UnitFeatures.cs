@@ -7,6 +7,9 @@ public abstract class UnitFeatures : ScriptableObject
     [SerializeField] private int _baseHealth;
     [SerializeField] private int _baseMana;
 
+    [SerializeField] private float _baseHealthRegeneration;
+    [SerializeField] private float _baseManaRegeneration;
+
     [SerializeField] private int _minDamage;
     [SerializeField] private int _maxDamage;
     
@@ -16,9 +19,12 @@ public abstract class UnitFeatures : ScriptableObject
     public virtual int Health => _baseHealth;
     public virtual int Mana => _baseMana;
 
+    public virtual float HealthRegeneration => _baseHealthRegeneration;
+    public virtual float ManaRegeneration => _baseManaRegeneration;
+
     public virtual int Damage => Random.Range(_minDamage, _maxDamage + 1);
     public virtual int MediumDamage => (_minDamage + _maxDamage) / 2;
 
     public int CurrentLevel => _currentLevel;
-    public int MaxLevel => _currentLevel;
+    public int MaxLevel => _maxLevel;
 }

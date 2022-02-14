@@ -8,14 +8,14 @@ public abstract class Unit : MonoBehaviour
 
     public UnitFeatures Features => _features;
     
-    protected HealthSystem _health;
-    protected ManaSystem _mana;
-    protected LevelSystem _level;
+    public HealthSystem Health { get; set; }
+    public ManaSystem Mana { get; set; }
+    public LevelSystem Level { get; set; }
 
     private void Start()
     {
-        _health = new HealthSystem(_features.Health);
-        _mana = new ManaSystem(_features.Mana);
-        _level = new LevelSystem(_features.CurrentLevel);
+        Health = new HealthSystem(_features.Health);
+        Mana = new ManaSystem(_features.Mana);
+        Level = new LevelSystem(_features.CurrentLevel);
     }
 }
