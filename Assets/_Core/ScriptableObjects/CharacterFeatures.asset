@@ -18,7 +18,7 @@ MonoBehaviour:
   _baseManaRegeneration: 0.4
   _minDamage: 30
   _maxDamage: 40
-  _currentLevel: 10
+  _currentLevel: 25
   _maxLevel: 25
   _attribute: 2
   _baseStrength: 10

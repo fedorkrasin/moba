@@ -27,4 +27,6 @@ public abstract class UnitFeatures : ScriptableObject
 
     public int CurrentLevel => _currentLevel;
     public int MaxLevel => _maxLevel;
+
+    public void SetCurrentLevel(int level) => _currentLevel = level;
 }

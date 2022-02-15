@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IRegenerable
 {
-    public void Regenerate(float regenerationPerSecond);
+    public void Regenerate(float regeneration);
 }

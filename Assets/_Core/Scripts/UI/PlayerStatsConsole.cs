@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class PlayerStatsConsole : MonoBehaviour
 {
     private const string lvl = "Level: {0}\tMax level: {1}";
-    private const string hp = "HP: {0} / {1} ({2}%) + {3} per sec";
-    private const string mp = "MP: {0} / {1} ({2}%) + {3} per sec";
+    private const string hp = "HP: {0} / {1} ({2:0}%) + {3} per sec";
+    private const string mp = "MP: {0} / {1} ({2:0}%) + {3} per sec";
     private const string dmg = "Damage: {0}";
     
     private const string strength = "Strength: {0} + {1}";
@@ -18,6 +18,11 @@ public class PlayerStatsConsole : MonoBehaviour
     [SerializeField] private Text _consoleText;
 
     private void Start()
+    {
+        UpdateConsole();
+    }
+
+    private void Update()
     {
         UpdateConsole();
     }

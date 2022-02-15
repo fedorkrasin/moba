@@ -7,6 +7,8 @@ public class HealthSystem : IRegenerable
     private int _maxHealth;
     private int _currentHealth;
 
+    private float _currentExactHealth;
+
     public HealthSystem(int health)
     {
         _maxHealth = health;
@@ -29,8 +31,27 @@ public class HealthSystem : IRegenerable
         if (_currentHealth > _maxHealth) _currentHealth = _maxHealth;
     }
 
-    public void Regenerate(float regenerationPerSecond)
+    public void Regenerate(float regeneration)
     {
-        throw new System.NotImplementedException();
+        if (_currentHealth != (int) _currentExactHealth) _currentExactHealth = _currentHealth;
+        
+        if (_currentExactHealth <= _maxHealth)
+        {
+            _currentExactHealth += regeneration;
+            _currentHealth = (int) _currentExactHealth;
+        }
+        else
+        {
+            _currentExactHealth = _maxHealth;
+            _currentHealth = _maxHealth;
+        }
+    }
+
+    public void Update(int newHealth)
+    {
+        var healthRatio = _currentExactHealth / _maxHealth;
+        _maxHealth = newHealth;
+        _currentExactHealth = healthRatio * _maxHealth;
+        _currentHealth = (int) _currentExactHealth;
     }
 }
